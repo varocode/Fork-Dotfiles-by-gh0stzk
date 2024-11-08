@@ -27,9 +27,10 @@ super + @space
 
 #####
 
-# Apps (browser, editor, filemanager)
-shift + alt + {b,g,n}
-	OpenApps {--browser,--editor,--filemanager}
+# Apps (browser, editor, filemanager,otros)
+shift + alt + {b,g,n,w,e,o,c}
+	OpenApps {--browser,--editor,--filemanager,--chrome,--edge,--noteobsidian,--vsc}
+
 
 # Terminal apps (ranger, nvim, ncmpcpp)
 shift + alt + {r,v,k}
@@ -57,6 +58,11 @@ super + alt + t
 # Scratchpad
 super + alt + o
 	tdrop -a -w 70% -h 35% -y 0 -x 15%  --class scratch alacritty --class=scratch
+
+# Scratchpad con Kitty
+super + alt + f
+    tdrop -a -w 50% -h 80% -y 0% -x 49% --class scratch kitty --class=scratch
+
 
 # Power off, Reboot, Log out, Lockscreen, kill an app
 ctrl + super + alt + {p,r,q,l,k}
@@ -196,3 +202,11 @@ ctrl + shift + alt + {Left,Down,Up,Right}
 # move a floating window
 alt + shift {Left,Down,Up,Right}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# Cambiar el idioma del teclado a inglés con ALT+F2
+alt + F2
+    setxkbmap us && notify-send "Idioma cambiado a Inglés (US)"
+
+# Cambiar el idioma del teclado a español con ALT+F3
+alt + F3
+    setxkbmap es && notify-send "Idioma cambiado a Español (ES)"

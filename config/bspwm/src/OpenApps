@@ -70,6 +70,18 @@ case "$1" in
     --browser)
         firefox
         ;;
+    --chrome)
+	google-chrome-stable &
+	;;
+    --edge)
+	microsoft-edge-stable &
+        ;;
+    --noteobsidian)
+	obsidian &
+	;;
+    --vsc)
+	code &
+	;;
     --editor)
         geany
         ;;
